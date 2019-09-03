@@ -21,13 +21,13 @@ get '/peanuts' do
   "Elephants..."
 end
 
-get '/random-cat' do
-  @random_names = ["Amigo", "Oscar", "Viking"].sample
-  erb(:index)
-end
+# get '/random-cat' do
+#   @random_names = ["Amigo", "Oscar", "Viking"].sample
+#   erb(:index)
+# end
 
 get '/named-cat' do
   p params
-  @random_names = params[:name]
+  @name = params[:name]
   erb(:index)
 end
